@@ -1,16 +1,14 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
-import UserCardUser from './UserCardUser'
+import CardUser from './CardUser'
 import data from './data/data.json'
 import FilterUsers from './FilterUsers'
 
 function App() {
-  // const [users] = useState(data);
-  // const [filteredUsers, setFilteredUsers] = useState(data);
-
-  // const [searchName, setSearchName] = useState("");
+  const [users] = useState(data);
+  const [filteredUsers, setFilteredUsers] = useState(data);
+  const [searchName, setSearchName] = useState("");
+  const [searchAttack, setSearchAttacks] = useState("");
 
   return (
 
@@ -19,16 +17,17 @@ function App() {
       <div>
         <h1 className='flex text-3xl'> Thrat Actor Database</h1>
       </div>
-      {/* <FilterUsers
+      <FilterUsers
         users={users}
         searchName={searchName}
         setSearchName={setSearchName}
+        searchAttack={searchAttack}
+        setSearchAttac={setSearchAttacks}
         setFilteredUsers={setFilteredUsers}
 
+      />
 
-      /> */}
-
-      <UserCardUser users={data} />
+      <CardUser users={filteredUsers} />
 
 
 

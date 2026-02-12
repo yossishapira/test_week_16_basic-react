@@ -1,13 +1,21 @@
 import React from 'react'
 
 
-export default function UserCardUser({ users }) {
-
-  {users.map((user,index) =>{
-
+export default function CardUser({ users }) {
+    if (users.length === 0) {
     return (
+      <p className="text-center text-gray-500">
+        No users found
+      </p>
+    );
+  }
 
-        <table key={index} className="table  border w-300 h-30">
+  
+  return (
+      <div>
+      {users.map(function(user,index) {
+          return (
+              <table key={index} className="table  border w-300 h-30">
             <thead>
                 <tr  className='border'>
                     <th>image</th>
@@ -30,10 +38,11 @@ export default function UserCardUser({ users }) {
                 </tr>
             </tbody>
         </table>
-)})}
+  );
+})}
+</ div>
+)
 
-
-  
 }
 
 
