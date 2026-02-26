@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function FilterUsers({ users, searchName, setSearchName,searchAttack,setSearchAttacks, setFilteredUsers }) {
+export default function FilterUsers({ users, searchName, setSearchName, searchAttack, setSearchAttacks, setFilteredUsers }) {
 
     function byName(e) {
         const value = e.target.value;
@@ -14,10 +14,10 @@ export default function FilterUsers({ users, searchName, setSearchName,searchAtt
 
         setFilteredUsers(filtered);
     }
-    
+
     function byAttack(e) {
         const value = e.target.value;
-        setSearchAttacks(value); 
+        setSearchAttacks(value);
 
         const filtered = users.filter(function (user) {
             return user.attacksCount
@@ -42,6 +42,10 @@ export default function FilterUsers({ users, searchName, setSearchName,searchAtt
                 onChange={byAttack}
                 className=" border p-3 rounded"
             />
+            <select className=" border  p-3 rounded" name="" id="">
+                <option value="Ford">Ford</option>
+                <option value="Volvo" selected>Volvo</option>
+                <option value="Fiat">Fiat</option> </select>
         </div>
     )
 }

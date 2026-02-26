@@ -15,7 +15,7 @@ export default function CardUser({ users }) {
       <div>
       {users.map(function(user,index) {
           return (
-              <table key={index} className="table  border w-300 h-30">
+              <table key={index} className="table border w-300 h-30">
             <thead>
                 <tr  className='border'>
                     <th>image</th>
@@ -24,7 +24,6 @@ export default function CardUser({ users }) {
                     <th>Number of Attacks</th>
                     <th>Status</th>
                     <th className=''>Short Description of Relation to Israel</th>
-
                 </tr>
             </thead>
             <tbody>
